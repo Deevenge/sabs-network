@@ -894,10 +894,74 @@ margin-bottom:28px;
 padding:76px 4%;
 }
 
+.podcast-grid,
+.event-grid,
+.reels{
+grid-template-columns:1fr;
+gap:16px;
+}
+
 .podcast-card,
-.event-card,
+.event-card{
+max-width:260px;
+width:100%;
+margin:0 auto;
+padding:10px;
+border-radius:18px;
+}
+
 .reel-card{
-max-width:none;
+max-width:248px;
+width:100%;
+margin:0 auto;
+padding:10px;
+border-radius:18px;
+}
+
+.media-frame,
+.reel-frame{
+border-radius:14px;
+}
+
+.media-frame{
+aspect-ratio:1 / 1;
+margin-bottom:10px;
+}
+
+.reel-frame{
+aspect-ratio:4 / 5;
+}
+
+.event-card h3,
+.reel-meta strong,
+.podcast-card h3{
+font-size:17px;
+line-height:1.2;
+margin:0 0 6px;
+}
+
+.event-card p,
+.reel-meta span,
+.podcast-time{
+font-size:13px;
+}
+
+.event-card p{
+margin:6px 0 8px;
+}
+
+.event-actions{
+padding-top:10px;
+}
+
+.ticket-link{
+padding:10px 14px;
+font-size:14px;
+}
+
+.reel-meta{
+gap:4px;
+padding:10px 4px 2px;
 }
 
 .crew-slider-wrap{

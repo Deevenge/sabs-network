@@ -11,5 +11,5 @@ git branch -M main
 git push -u origin main
 
 git add .
-git commit -m "fixed slider on mobile only"
+git commit -m "updated image captions"
 git push -u origin main

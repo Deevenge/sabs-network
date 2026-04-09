@@ -136,11 +136,14 @@ eventCards.forEach((card) => {
 const crewSlider = document.querySelector(".crew-slider");
 const leftArrow = document.querySelector(".slider-arrow.left");
 const rightArrow = document.querySelector(".slider-arrow.right");
-let autoSlideStopped = false;
 let autoScrollFrame = null;
+let autoSlideEnabled = false;
+let autoSlideStoppedByArrow = false;
 let crewPointerStartX = 0;
 let crewPointerStartY = 0;
 let suppressCrewClick = false;
+const mobileSliderQuery = window.matchMedia("(max-width: 768px)");
+const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function openCrewModal(card) {
   const imageSrc = card.dataset.image;
@@ -164,9 +167,18 @@ function openCrewModal(card) {
 }
 
 function stopAutoSlide() {
-  autoSlideStopped = true;
+  autoSlideStoppedByArrow = true;
 
   if (autoScrollFrame) {
+    cancelAnimationFrame(autoScrollFrame);
+    autoScrollFrame = null;
+  }
+}
+
+function syncAutoSlideState() {
+  autoSlideEnabled = mobileSliderQuery.matches && !reduceMotionQuery.matches && !autoSlideStoppedByArrow;
+
+  if (!autoSlideEnabled && autoScrollFrame) {
     cancelAnimationFrame(autoScrollFrame);
     autoScrollFrame = null;
   }
@@ -211,12 +223,12 @@ if (crewSlider) {
       return;
     }
 
-    stopAutoSlide();
     openCrewModal(clickedCard);
   });
 
   const autoScroll = () => {
-    if (autoSlideStopped) {
+    if (!autoSlideEnabled) {
+      autoScrollFrame = null;
       return;
     }
 
@@ -230,7 +242,17 @@ if (crewSlider) {
     autoScrollFrame = requestAnimationFrame(autoScroll);
   };
 
-  autoScrollFrame = requestAnimationFrame(autoScroll);
+  const startAutoScrollIfNeeded = () => {
+    syncAutoSlideState();
+
+    if (autoSlideEnabled && !autoScrollFrame) {
+      autoScrollFrame = requestAnimationFrame(autoScroll);
+    }
+  };
+
+  startAutoScrollIfNeeded();
+  mobileSliderQuery.addEventListener("change", startAutoScrollIfNeeded);
+  reduceMotionQuery.addEventListener("change", startAutoScrollIfNeeded);
 }
 
 if (leftArrow && crewSlider) {
