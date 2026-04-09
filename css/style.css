@@ -907,7 +907,7 @@ gap:10px;
 }
 
 .crew-slider{
-gap:14px;
+gap:12px;
 padding:10px 0 14px;
 flex:1 1 auto;
 }
@@ -923,8 +923,8 @@ flex:0 0 auto;
 }
 
 .crew-card{
-min-width:72vw;
-max-width:72vw;
+min-width:52vw;
+max-width:52vw;
 }
 
 .media-modal{

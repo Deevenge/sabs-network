@@ -138,6 +138,9 @@ const leftArrow = document.querySelector(".slider-arrow.left");
 const rightArrow = document.querySelector(".slider-arrow.right");
 let autoSlideStopped = false;
 let autoScrollFrame = null;
+let crewPointerStartX = 0;
+let crewPointerStartY = 0;
+let suppressCrewClick = false;
 
 function openCrewModal(card) {
   const imageSrc = card.dataset.image;
@@ -184,10 +187,27 @@ if (crewSlider) {
     crewSlider.appendChild(clone);
   });
 
+  crewSlider.addEventListener("pointerdown", (event) => {
+    crewPointerStartX = event.clientX;
+    crewPointerStartY = event.clientY;
+    suppressCrewClick = false;
+  });
+
+  crewSlider.addEventListener("pointermove", (event) => {
+    if (Math.abs(event.clientX - crewPointerStartX) > 10 || Math.abs(event.clientY - crewPointerStartY) > 10) {
+      suppressCrewClick = true;
+    }
+  });
+
   crewSlider.addEventListener("click", (event) => {
     const clickedCard = event.target.closest(".crew-card");
 
     if (!clickedCard) {
+      return;
+    }
+
+    if (suppressCrewClick) {
+      suppressCrewClick = false;
       return;
     }
 
