@@ -4,12 +4,14 @@ const nav = document.getElementById("navMenu");
 if (toggle && nav) {
   toggle.addEventListener("click", () => {
     nav.classList.toggle("active");
+    toggle.setAttribute("aria-expanded", String(nav.classList.contains("active")));
   });
 
   const navLinks = document.querySelectorAll("#navMenu a");
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("active");
+      toggle.setAttribute("aria-expanded", "false");
     });
   });
 }
@@ -178,6 +180,7 @@ if (crewSlider) {
   originalCards.forEach((card) => {
     const clone = card.cloneNode(true);
     clone.setAttribute("aria-hidden", "true");
+    clone.tabIndex = -1;
     crewSlider.appendChild(clone);
   });
 
@@ -189,6 +192,10 @@ if (crewSlider) {
     }
 
     openCrewModal(clickedCard);
+  });
+
+  ["pointerdown", "wheel", "touchstart", "mouseenter", "focusin"].forEach((eventName) => {
+    crewSlider.addEventListener(eventName, stopAutoSlide, { passive: true });
   });
 
   const autoScroll = () => {

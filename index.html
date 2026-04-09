@@ -20,21 +20,23 @@
 <header>
 
 <div class="logo">
-<img src="images/logo.jpg" alt="SABS Network logo">
+<a href="#home" aria-label="Go to homepage">
+<img src="images/blacklogo.PNG" alt="SABS Network logo">
+</a>
 </div>
 
 <nav id="navMenu">
 <a href="#home">Home</a>
 <a href="#podcasts">Podcasts</a>
 <a href="#events">Events</a>
-<a href="#gallery">Gallery</a>
+<a href="#clips">Clips</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
 
-<div class="hamburger" id="hamburger">
-☰
-</div>
+<button class="hamburger" id="hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+&#9776;
+</button>
 
 </header>
 
@@ -59,7 +61,7 @@
 
 <h1>SABS NETWORK</h1>
 
-<p>South Africa’s home of comedy podcasts, live shows and creators.</p>
+<p>South Africa&apos;s home of comedy podcasts, live shows and creators.</p>
 
 <div class="hero-buttons">
 
@@ -81,49 +83,49 @@
 
 <div class="podcast-grid">
 
-<a class="podcast-card event-card" href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-<div class="media-frame">
-<img src="images/pnc logo.PNG" alt="PNC Podcast artwork">
-</div>
-<h3>PNC Podcast</h3>
-<p>Comedy, culture and wild conversations.</p>
-<span class="podcast-time">Wednesday • 15:00</span>
-<div class="event-actions">
-<span class="ticket-link">Watch on YouTube</span>
-</div>
-</a>
-
-<a class="podcast-card event-card" href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-<div class="media-frame">
-<img src="images/sportspackblitz.PNG" alt="Sports Pack Blitz artwork">
-</div>
-<h3>Sports Pack Blitz</h3>
-<p>Sports talk with comedy energy.</p>
-<span class="podcast-time">Tuesday • 15:00</span>
-<div class="event-actions">
-<span class="ticket-link">Watch on YouTube</span>
-</div>
-</a>
-
-<a class="podcast-card event-card" href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+<a class="podcast-card event-card" href="https://www.youtube.com/watch?v=5Ln7mZPxXK4&list=PLbvSWEB9s1Olev-LBCJnzb0ssQyvNUz1F" target="_blank" rel="noopener noreferrer">
 <div class="media-frame">
 <img src="images/mtn.png" alt="Making The Network artwork">
 </div>
 <h3>Making The Network</h3>
 <p>Behind the growth of SABS.</p>
-<span class="podcast-time">Monday • 16:30</span>
+<span class="podcast-time">Monday &bull; 16:30</span>
 <div class="event-actions">
 <span class="ticket-link">Watch on YouTube</span>
 </div>
 </a>
 
-<a class="podcast-card event-card" href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+<a class="podcast-card event-card" href="https://www.youtube.com/watch?v=hJStfja-JoE&list=PLbvSWEB9s1OkNZs2JGlpP5E-7KBq7Zbgq" target="_blank" rel="noopener noreferrer">
+<div class="media-frame">
+<img src="images/sportspackblitz.PNG" alt="Sports Pack Blitz artwork">
+</div>
+<h3>Sports Pack Blitz</h3>
+<p>Sports talk with comedy energy.</p>
+<span class="podcast-time">Tuesday &bull; 15:00</span>
+<div class="event-actions">
+<span class="ticket-link">Watch on YouTube</span>
+</div>
+</a>
+
+<a class="podcast-card event-card" href="https://www.youtube.com/watch?v=6BFCxD4IT58&list=PLbvSWEB9s1OlIawSGNu2RDAmkBykZm4QY" target="_blank" rel="noopener noreferrer">
+<div class="media-frame">
+<img src="images/pnc logo.PNG" alt="PNC Podcast artwork">
+</div>
+<h3>PNC Podcast</h3>
+<p>Comedy, culture and wild conversations.</p>
+<span class="podcast-time">Wednesday &bull; 15:00</span>
+<div class="event-actions">
+<span class="ticket-link">Watch on YouTube</span>
+</div>
+</a>
+
+<a class="podcast-card event-card" href="https://www.youtube.com/@sabsnetwork/videos" target="_blank" rel="noopener noreferrer">
 <div class="media-frame">
 <img src="images/r.png" alt="Random Guy Podcast artwork">
 </div>
 <h3>Random Guy Podcast</h3>
 <p>Unfiltered conversations.</p>
-<span class="podcast-time">Sunday • 19:00</span>
+<span class="podcast-time">Sunday &bull; 15:00</span>
 <div class="event-actions">
 <span class="ticket-link">Watch on YouTube</span>
 </div>
@@ -134,9 +136,58 @@
 </section>
 
 
+<!-- EVENTS -->
+
+<section id="events" class="section">
+
+<h2>Upcoming Comedy Events</h2>
+
+<div class="event-grid">
+
+<div class="event-card" role="button" tabindex="0" data-image="images/bioskop.PNG" data-name="Bioskop Sundays" data-location="Johannesburg" data-caption="Live comedy experience." data-ticket="https://tickets.tixsa.co.za/event/bioscope-sundays-2026-12apr">
+<div class="media-frame">
+<img src="images/bioskop.PNG" alt="Bioskop Sundays event poster">
+</div>
+<h3>Bioskop Sundays</h3>
+<p>Live comedy experience.</p>
+<span>Johannesburg</span>
+<div class="event-actions">
+<a href="https://tickets.tixsa.co.za/event/bioscope-sundays-2026-12apr" target="_blank" rel="noopener noreferrer" class="ticket-link">Buy Tickets</a>
+</div>
+</div>
+
+<div class="event-card" role="button" tabindex="0" data-image="images/artisty sundays.PNG" data-name="Artistry Sundays" data-location="Pretoria" data-caption="Stand-up and live podcast." data-ticket="https://thisisartistry.co.za/product/artistry-sundays-hosted-by-mpho-popps-thabiso-mhlongo-6/">
+<div class="media-frame">
+<img src="images/artisty sundays.PNG" alt="Artistry Sundays event poster">
+</div>
+<h3>Artistry Sundays</h3>
+<p>Stand-up and live podcast.</p>
+<span>Pretoria</span>
+<div class="event-actions">
+<a href="https://thisisartistry.co.za/product/artistry-sundays-hosted-by-mpho-popps-thabiso-mhlongo-6/" target="_blank" rel="noopener noreferrer" class="ticket-link">Buy Tickets</a>
+</div>
+</div>
+
+<div class="event-card" role="button" tabindex="0" data-image="images/pnclive.PNG" data-name="PNC Live Podcast" data-location="South Africa Tour" data-caption="Road show special event." data-ticket="https://www.ticketpro.co.za/">
+<div class="media-frame">
+<img src="images/pnclive.PNG" alt="PNC Live Podcast event poster">
+</div>
+<h3>PNC Live Podcast</h3>
+<p>Road show special event.</p>
+<span>South Africa Tour</span>
+<div class="event-actions">
+<a href="https://www.ticketpro.co.za/" target="_blank" rel="noopener noreferrer" class="ticket-link">Buy Tickets</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
 <!-- REELS -->
 
-<section id="gallery" class="section dark">
+<section id="clips" class="section dark">
 
 <h2>Latest Clips</h2>
 
@@ -179,58 +230,9 @@
 </section>
 
 
-<!-- EVENTS -->
-
-<section id="events" class="section">
-
-<h2>Upcoming Comedy Events</h2>
-
-<div class="event-grid">
-
-<div class="event-card" role="button" tabindex="0" data-image="images/bioskop.PNG" data-name="Bioskop Sundays" data-location="Johannesburg" data-caption="Live comedy experience." data-ticket="https://www.ticketpro.co.za/">
-<div class="media-frame">
-<img src="images/bioskop.PNG" alt="Bioskop Sundays event poster">
-</div>
-<h3>Bioskop Sundays</h3>
-<p>Live comedy experience.</p>
-<span>Johannesburg</span>
-<div class="event-actions">
-<a href="https://www.ticketpro.co.za/" target="_blank" rel="noopener noreferrer" class="ticket-link">Buy Tickets</a>
-</div>
-</div>
-
-<div class="event-card" role="button" tabindex="0" data-image="images/artisty sundays.PNG" data-name="Artistry Sundays" data-location="Pretoria" data-caption="Stand-up and live podcast." data-ticket="https://www.ticketpro.co.za/">
-<div class="media-frame">
-<img src="images/artisty sundays.PNG" alt="Artistry Sundays event poster">
-</div>
-<h3>Artistry Sundays</h3>
-<p>Stand-up and live podcast.</p>
-<span>Pretoria</span>
-<div class="event-actions">
-<a href="https://www.ticketpro.co.za/" target="_blank" rel="noopener noreferrer" class="ticket-link">Buy Tickets</a>
-</div>
-</div>
-
-<div class="event-card" role="button" tabindex="0" data-image="images/pnclive.PNG" data-name="PNC Live Podcast" data-location="South Africa Tour" data-caption="Road show special event." data-ticket="https://www.ticketpro.co.za/">
-<div class="media-frame">
-<img src="images/pnclive.PNG" alt="PNC Live Podcast event poster">
-</div>
-<h3>PNC Live Podcast</h3>
-<p>Road show special event.</p>
-<span>South Africa Tour</span>
-<div class="event-actions">
-<a href="https://www.ticketpro.co.za/" target="_blank" rel="noopener noreferrer" class="ticket-link">Buy Tickets</a>
-</div>
-</div>
-
-</div>
-
-</section>
-
-
 <!-- CREW -->
 
-<section id="gallery" class="section dark">
+<section id="crew" class="section dark">
 
 <h2>The Crew</h2>
 
@@ -357,7 +359,7 @@
 <div class="about-copy">
 <p>
 
-SABS Network is a South African comedy podcast collective bringing together creators, comedians and storytellers.  
+SABS Network is a South African comedy podcast collective bringing together creators, comedians and storytellers.
 From live comedy shows to podcast tours, the network continues to grow the comedy culture and give audiences real conversations and laughter.
 
 </p>
@@ -365,6 +367,10 @@ From live comedy shows to podcast tours, the network continues to grow the comed
 
 <div class="about-video-card">
 <video src="videos/hero.mp4" autoplay muted loop playsinline preload="metadata"></video>
+<a class="about-video-link" href="https://www.youtube.com/@sabsnetwork/videos" target="_blank" rel="noopener noreferrer" aria-label="Watch SABS Network on YouTube">
+<span class="youtube-badge" aria-hidden="true">▶</span>
+<span>Watch on YouTube</span>
+</a>
 </div>
 </div>
 
@@ -396,7 +402,7 @@ From live comedy shows to podcast tours, the network continues to grow the comed
 
 <footer>
 
-<p>© 2026 SABS Network</p>
+<p>&copy; 2026 SABS Network</p>
 
 </footer>
 
