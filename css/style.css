@@ -901,16 +901,25 @@ max-width:none;
 }
 
 .crew-slider-wrap{
-display:block;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 .crew-slider{
 gap:14px;
 padding:10px 0 14px;
+flex:1 1 auto;
 }
 
 .slider-arrow{
-display:none;
+display:flex;
+width:40px;
+height:40px;
+font-size:22px;
+align-items:center;
+justify-content:center;
+flex:0 0 auto;
 }
 
 .crew-card{

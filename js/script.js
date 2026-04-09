@@ -191,11 +191,8 @@ if (crewSlider) {
       return;
     }
 
+    stopAutoSlide();
     openCrewModal(clickedCard);
-  });
-
-  ["pointerdown", "wheel", "touchstart", "mouseenter", "focusin"].forEach((eventName) => {
-    crewSlider.addEventListener(eventName, stopAutoSlide, { passive: true });
   });
 
   const autoScroll = () => {
