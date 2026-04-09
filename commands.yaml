@@ -11,5 +11,5 @@ git branch -M main
 git push -u origin main
 
 git add .
-git commit -m "updated image captions"
+git commit -m "updated the mobile cards"
 git push -u origin main
