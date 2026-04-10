@@ -11,5 +11,10 @@ git branch -M main
 git push -u origin main
 
 git add .
-git commit -m "updated the mobile cards"
+git commit -m "added the read caption button on cards"
 git push -u origin main
+
+tsitsichiumya@gmail.com | +27 74 181 8731
+shanrayvw@gmail.com
+metsnmabs@gmail.com
+mr.modikoane@gmail.com
